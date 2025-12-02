@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const BookContext = createContext();
 
-const API_BASE = process.env.BACKEND_URL; // uses your bookRoutes
+const API_BASE = import.meta.env.VITE_BACKEND_URL; // uses your bookRoutes
 
 export const BookProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
